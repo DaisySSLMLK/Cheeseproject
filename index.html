@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheese 🧀</title>
+    <style>
+      body{
+        background: linear-gradient(-20deg, rgb(233, 222, 250) 0%, rgb(251, 252, 219) 100%);
+      }
+      h1{
+        color:red;
+        font-size: 42px;
+        padding: 20px;
+        text-align: center;
+      }
+      h2{
+        color:orange;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+      }
+      img{
+        border: 10px #cdf0ea;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        width: 90%;
+      }
+      button{
+        background: #f6c6ea;
+        border: 1px #f6c6ea;
+        border-radius: 30px;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        color: white;
+        display: block;
+        margin: 0 auto;
+        padding: 15px 20px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover{
+        background: white;
+        color:  #f6c6ea;
+        cursor: pointer;
+      }
+      .content{
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+      }
+      p{
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.3;
+      }
+      span.cheese {
+        color: orange;
+      }
+      li{ 
+        font-family: Arial, Helvetica, sans-serif;
+        list-style-type: style;
+      }
+      .young:hover{
+        color: #faf4b7;
+      }
+      .ym:hover{
+        color:#fffbac;
+      }
+      .matured:hover{
+        color: yellow;
+      }
+      .extra:hover{
+        color: #ffd495;
+      }
+      .old:hover{
+        color: #faab78;
+      }
+      .very:hover{
+        color: orange;
+      }
+      footer{
+        color: #5d3891;
+        font-size: 9px;
+        padding: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+    <h1>I l❤️ve Cheese!</h1>
+    <h2>Especially Dutch or Gouda cheese 🧀</h2>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/350/original/Kaas_winkel_2.0.jpg?1680687634" alt="Cheese shop"/>
+    <button class="buy-button">
+      Try Dutch Cheese
+    </button>
+    <p>
+      Gouda <span class="cheese">cheese</span>
+      (Dutch: Goudse kaas, "<span class="cheese">cheese</span> from Gouda") is a sweet, creamy, yellow cow's milk <span class="cheese">cheese</span> 
+      originating from <strong>the Netherlands</strong>. It is one of the most popular <span class="cheese">cheeses</span> worldwide. 
+      <br/>
+      The name is used today as a general
+      term for numerous similar <span class="cheese">cheeses</span> produced in the traditional Dutch
+      manner.
+      <p/>
+      <hr/>
+      <p>
+      Dutch <span class="cheese">cheese</span> makers generally use six gradations, or categories, to classify the <span class="cheese">cheese</span>:
+      </p>
+      <ul>
+        <li class="young">
+          Young 
+        </li>
+        <li class="ym">
+          Young matured 
+        </li>
+        <li class="matured">
+          Matured 
+        </li>
+        <li class="extra">
+          Extra matured 
+        </li>
+        <li class="old">
+          Old 
+        </li>
+        <li class="very">
+          Very old 
+        </li>
+      </ul>
+      <a href="https://en.wikipedia.org/wiki/Gouda_cheese" target="_blank">
+        Read on wikipedia
+      </a>    
+    </p>
+    <footer>
+      <p>
+        Made by <em>Désirée Willems</em>
+      </p>
+    </footer>
+    </div>
+    <script>
+      function buy(){
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let emoji = prompt("What is your favorite emoji?");
+        let cheese = prompt("Do you like cheese?");
+        alert(
+          "Thank you "+
+          name +
+          "! We'll be in touch by email, meanwhile enjoy 🧀!" +
+          emoji
+        );
+        let h1 = document.querySelector("h1");
+        if (cheese === "yes"){
+          h1.innerHTML= name + " l❤️ves Cheese!"
+        } else{
+          h1.innerHTML= name + " 💔 Cheese ☹️"
+        }
+      }
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
